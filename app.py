@@ -1,6 +1,7 @@
 import gradio as gr
 import numpy as np
 from PIL import Image
+import cv2
 
 def image_modifier(img, brightness, contrast):
     if isinstance(img, Image.Image):
@@ -65,4 +66,4 @@ with gr.Blocks(title="Multi-Tool Demo App") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(share=False)
+    demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
